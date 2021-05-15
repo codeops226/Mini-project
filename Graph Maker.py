@@ -89,6 +89,7 @@ def line(a):
             p=reg.predict([[float(sayforinput('Enter the value for which you need prediction: '))]])
             say('Corresponding value of y= '+str(p[0]))
     if int(a)==3:
+        say("Value before delimeter will be used as x point and Value after delimeter as y point")
         x1,y1 = np.loadtxt(tf,unpack=True,delimiter=m)
         x=[]
         y=[]
@@ -159,6 +160,7 @@ def bar(a):
         plt.ylabel(sayforinput("Enter label for y axis: "))
         plt.show()
     if int(a)==3:
+        say("Name of x label should be before delimeter and y coordinate after delimeter")
         x1 = np.loadtxt(tf,unpack=True,dtype=str,delimiter=m,usecols=(0))
         y1 = np.loadtxt(tf,unpack=True,delimiter=m,usecols=(1))
         x=[]
@@ -219,7 +221,7 @@ def pie(a):
         plt.title(sayforinput("Enter title: "))
         plt.show()
     if int(a)==3:
-        say("First column should be label and second should contain percentages")
+        say("Label should be before delimeter and percentage after delimeter")
         x1 = np.loadtxt(tf,unpack=True,dtype=str,delimiter=m,usecols=(0))
         y1 = np.loadtxt(tf,unpack=True,delimiter=m,usecols=(1))
         x=[]
@@ -295,6 +297,7 @@ def scatter(a):
             p=reg.predict([[float(sayforinput('Enter the value for which you need prediction: '))]])
             say('Corresponding value of y= '+ str(p[0]))
     if int(a)==3:
+        say("Value before delimeter will be used as x point and Value after delimeter as y point")
         x1,y1 = np.loadtxt(tf,unpack=True,delimiter=m)
         x=[]
         y=[]
